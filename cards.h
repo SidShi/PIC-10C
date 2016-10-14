@@ -85,6 +85,14 @@ class Player {
 
       // You decide what functions you'll need...
 
+	  // Accessor: get player's money
+	  int get_money();
+
+	  // Change of player's money
+	  void moneyChange(int m);
+
+
+
    private:
       int money;
       // You decide what extra fields (if any) you'll need...

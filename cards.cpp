@@ -225,3 +225,17 @@ double Hand::HandValue() {
    ************************************************* */
 // Implemente the member functions of the Player class here.
 
+// Constructor, start with assigned money
+Player::Player(int m) {
+	money = m;
+}
+
+// Get the current amount of money
+int Player::get_money() {
+	return(money);
+}
+
+// Change money according to wins or losses
+void Player::moneyChange(int m) {
+	money += m;
+}

@@ -71,6 +71,9 @@ class Hand {
 	  // Calculate the value in Hand
 	  double HandValue();
 
+	  // Accessor: get Cards in Hand
+	  vector<Card> cards();
+
    private:
       // You decide what fields you'll need...
 	   vector<Card> HandCard;

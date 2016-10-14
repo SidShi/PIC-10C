@@ -219,6 +219,12 @@ double Hand::HandValue() {
 }
 
 
+// Accessor of Hand Cards
+vector<Card> Hand::cards() {
+	return HandCard;
+}
+
+
 
 /* *************************************************
    Player class

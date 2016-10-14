@@ -91,8 +91,11 @@ class Player {
 	  // Accessor: get player's money
 	  int get_money();
 
-	  // Change of player's money
-	  void moneyChange(int m);
+	  // Player wins
+	  void moneyWin(int m);
+
+	  // Player loses
+	  void moneyLoss(int m);
 
 
 

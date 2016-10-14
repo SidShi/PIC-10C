@@ -241,7 +241,12 @@ int Player::get_money() {
 	return(money);
 }
 
-// Change money according to wins or losses
-void Player::moneyChange(int m) {
+// Player wins
+void Player::moneyWin(int m) {
 	money += m;
+}
+
+// Player loses
+void Player::moneyLoss(int m) {
+	money -= m;
 }

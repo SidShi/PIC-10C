@@ -192,6 +192,32 @@ bool Card::operator < (Card card2) const {
    ************************************************* */
 // Implemente the member functions of the Hand class here.
 
+// Constructor, start with one Card in Hand
+Hand::Hand() {
+	Card firstCard;
+	HandCard.push_back(firstCard);
+}
+
+// Add a new Card to Hand when choice made
+void Hand::addCard(Card newCard) {
+	HandCard.push_back(newCard);
+}
+
+// Calculate the value in Hand
+double Hand::HandValue() {
+	double sum(0);
+	for (int i = 0; i < HandCard.size(); ++i) {
+		int CardRank = HandCard[i].get_rank();
+		if (CardRank > 7) {
+			sum += 0.5;
+		}
+		else {
+			sum += CardRank;
+		}
+	}
+	return(sum);
+}
+
 
 
 /* *************************************************

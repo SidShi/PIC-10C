@@ -65,8 +65,15 @@ class Hand {
 
       // You decide what functions you'll need...
 
+	  // Add a new Card to Hand
+	  void addCard(Card newCard);
+
+	  // Calculate the value in Hand
+	  double HandValue();
+
    private:
       // You decide what fields you'll need...
+	   vector<Card> HandCard;
 };
 
 

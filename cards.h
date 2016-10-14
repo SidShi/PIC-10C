@@ -65,8 +65,18 @@ class Hand {
 
       // You decide what functions you'll need...
 
+	  // Add a new Card to Hand
+	  void addCard(Card newCard);
+
+	  // Calculate the value in Hand
+	  double HandValue();
+
+	  // Accessor: get Cards in Hand
+	  vector<Card> cards();
+
    private:
       // You decide what fields you'll need...
+	   vector<Card> HandCard;
 };
 
 
@@ -77,6 +87,17 @@ class Player {
       Player(int m);
 
       // You decide what functions you'll need...
+
+	  // Accessor: get player's money
+	  int get_money();
+
+	  // Player wins
+	  void moneyWin(int m);
+
+	  // Player loses
+	  void moneyLoss(int m);
+
+
 
    private:
       int money;

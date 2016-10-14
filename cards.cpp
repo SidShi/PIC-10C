@@ -109,14 +109,66 @@ string Card::get_spanish_rank() const {
 
 // Accessor: returns a string with the suit of the card in English 
 // This is just a stub! Modify it to your liking.
-string Card::get_english_suit() const { 
-   return "";
+string Card::get_english_suit() const {
+	string suitName;
+	switch (suit) {
+	case OROS:
+		suitName = "golds";
+		break;
+	case COPAS:
+		suitName = "cups";
+		break;
+	case ESPADAS:
+		suitName = "swords";
+		break;
+	case BASTOS:
+		suitName = "clubs";
+		break;
+	default:
+		break;
+	}
+    return suitName;
 }
 
 // Accessor: returns a string with the rank of the card in English 
 // This is just a stub! Modify it to your liking.
-string Card::get_english_rank() const { 
-   return "";
+string Card::get_english_rank() const {
+	string rankName;
+	switch (rank) {
+	case AS:
+		rankName = "One";
+		break;
+	case DOS:
+		rankName = "Two";
+		break;
+	case TRES:
+		rankName = "Three";
+		break;
+	case CUATRO:
+		rankName = "Four";
+		break;
+	case CINCO:
+		rankName = "Five";
+		break;
+	case SEIS:
+		rankName = "Six";
+		break;
+	case SIETE:
+		rankName = "Seven";
+		break;
+	case SOTA:
+		rankName = "Jack";
+		break;
+	case CABALLO:
+		rankName = "Queen";
+		break;
+	case REY:
+		rankName = "King";
+		break;
+	default:
+		break;
+	}
+    return rankName;
 }
 
 
@@ -140,6 +192,38 @@ bool Card::operator < (Card card2) const {
    ************************************************* */
 // Implemente the member functions of the Hand class here.
 
+// Constructor, start with one Card in Hand
+Hand::Hand() {
+	Card firstCard;
+	HandCard.push_back(firstCard);
+}
+
+// Add a new Card to Hand when choice made
+void Hand::addCard(Card newCard) {
+	HandCard.push_back(newCard);
+}
+
+// Calculate the value in Hand
+double Hand::HandValue() {
+	double sum(0);
+	for (int i = 0; i < HandCard.size(); ++i) {
+		int CardRank = HandCard[i].get_rank();
+		if (CardRank > 7) {
+			sum += 0.5;
+		}
+		else {
+			sum += CardRank;
+		}
+	}
+	return(sum);
+}
+
+
+// Accessor of Hand Cards
+vector<Card> Hand::cards() {
+	return HandCard;
+}
+
 
 
 /* *************************************************
@@ -147,3 +231,22 @@ bool Card::operator < (Card card2) const {
    ************************************************* */
 // Implemente the member functions of the Player class here.
 
+// Constructor, start with assigned money
+Player::Player(int m) {
+	money = m;
+}
+
+// Get the current amount of money
+int Player::get_money() {
+	return(money);
+}
+
+// Player wins
+void Player::moneyWin(int m) {
+	money += m;
+}
+
+// Player loses
+void Player::moneyLoss(int m) {
+	money -= m;
+}

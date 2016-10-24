@@ -18,7 +18,7 @@ using namespace std;
 
 // Stub for main
 int main() {
-	startMoney(100);
+	int startMoney(100);
 	Player MyMoney(startMoney);
 	
 

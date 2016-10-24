@@ -2,18 +2,19 @@
 Homework codes for UCLA PIC 10C
 
 # Attribution
-Copyright: Public domain.
-Filename:  cards.cpp; cards.h; siete_y_medio.cpp
-Purpose:   This project aims to simulate a Mexican card game called 7 and half
-           cards.cpp and cards.h contain declaration and implementation of classes and functions
-           siete_y_medio.cpp is for the main function
-Assembler: SidShi
-Contact:   Tianyi Shi shitianyisid@gmail.com
-Last update: 10/23/2016
+- Copyright: Public domain.  
+- Filename:  cards.cpp; cards.h; siete_y_medio.cpp  
+- Purpose:   This project aims to simulate a Mexican card game called 7 and half  
+             cards.cpp and cards.h contain declaration and implementation of classes and functions  
+             siete_y_medio.cpp is for the main function  
+- Assembler: SidShi  
+- Contact:   Tianyi Shi shitianyisid@gmail.com  
+- Last update: 10/23/2016  
 
 
 
 # Test case (one simulation of a game):
+```
 You have $100. Enter bet: 99
 Your cards:
                 Sota de copas   (Jack of cups).
@@ -106,3 +107,4 @@ Too bad. You lose 3.
 You have $0. GAME OVER!
 Come back when you have more money.
 Bye!
+```
